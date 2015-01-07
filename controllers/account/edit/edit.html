@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-lg-6">
+        <form class="form-horizontal" action="/user/{{.Name}}/edit" method="post">
+            <fieldset>
+                <div class="form-group">
+                    <label for="name" class="col-lg-2 control-label">{{ SetHtmlText "html/text" "text01" }}</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" name="name" value="{{.Name}}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-lg-2 control-label">{{ SetHtmlText "html/text" "text02" }}</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" name="email" value="{{.Email}}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-lg-2 control-label">{{ SetHtmlText "html/text" "text03" }}</label>
+                    <div class="col-lg-10">
+                        <p>
+                            <img id="robots" src="/captcha/{{.Captcha}}.png" alt="Captcha">
+                        </p>
+                        <input id="certification" type="hidden" name="certification" value="{{.Certification}}" />
+                        <a id="reload" href="#">{{ SetHtmlText "html/text" "text04" }}</a>
+                        <input type="text" class="form-control" name="human" placeholder="{{ SetHtmlText "html/form" "text03" }}">
+                        <input type="hidden" name="csrf_token" value="{{.Csrf}}" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">{{ SetHtmlText "html/text" "text05" }}</button>
+                        <button type="button" id="cancel" class="btn btn-default">{{ SetHtmlText "html/text" "text06" }}</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<script src="/js/captcha.js"></script>
+<script src="/js/edit.js"></script>

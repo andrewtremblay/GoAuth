@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-lg-6">
+        <form class="form-horizontal" action="/user/reset/{id}" method="post">
+            <fieldset>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="newpw" placeholder="{{ SetHtmlText "html/form" "text04" }}">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="confirmpw" placeholder="{{ SetHtmlText "html/form" "text13" }}">
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="csrf_token" value="{{.Csrf}}" />
+                    <button type="submit" class="btn btn-primary">{{ SetHtmlText "html/text" "text05" }}</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

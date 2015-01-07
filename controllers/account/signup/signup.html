@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-lg-6">
+        <form action="/user/signup" method="post">
+            <fieldset>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" value="{{.Name}}" placeholder="{{ SetHtmlText "html/form" "text01" }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="email" value="{{.Email}}" placeholder="{{ SetHtmlText "html/form" "text02" }}">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="emailconfirm" value="{{.Emailconfirm}}" placeholder="{{ SetHtmlText "html/form" "text07" }}">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="{{ SetHtmlText "html/form" "text04" }}">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="termof" value="true">{{ SetHtmlText "html/text" "text12" }}
+                    </label>
+                </div>
+                <div class="form-group">
+                    </br>
+                    <p>
+                        <img id="robots" src="/captcha/{{.Captcha}}.png" alt="Captcha">
+                    </p>
+                    <input id="certification" type="hidden" name="certification" value="{{.Certification}}" />
+                    <a id="reload" href="#">{{ SetHtmlText "html/text" "text04" }}</a>
+                    <input type="text" class="form-control" name="human" placeholder="{{ SetHtmlText "html/form" "text03" }}">
+                </div>
+
+                <input type="hidden" name="csrf_token" value="{{.Csrf}}" />
+                <button type="submit" class="btn btn-default">{{ SetHtmlText "html/text" "text13" }}</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<script src="/js/captcha.js"></script>
+<script src="/js/signup.js"></script>
