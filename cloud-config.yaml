@@ -1,0 +1,5 @@
+#cloud-config
+hostname: coreos
+# include one or more SSH public keys
+ssh_authorized_keys:
+- ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAhD0PNlvdP6sfBjK3h6WVhzi7uqNYf1XdRppifjEePh3wUQlmX7KBn4cEFS+L9bhast0RRhpMdcOMH50v0ufYe+Q0mXknnO9k6wNP/2bt4MjS5UTazJMnsvh2vi2TBTd3bf8OnZUl3jG4VfgnWRleZWO/Tnwz65/kgGOgzOQw9e2yvM/X/vMKqL9+urbpCG8qCiiEDvKHNeDaP0MLREwXGzHOwPkAlZxu0QBWcdyHV4P3+/zQPw1TW4aPnSU948fZFLFYf/79p1o3scWsYb0fcrIIDHejpetjivoZ88r4AL62o4/lcTbRYio0Kqr5RkQEn2Tt4MCgLPuMSshMme/Aiw== rsa-key-20151227
